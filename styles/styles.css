@@ -1,0 +1,34 @@
+:root {
+    --blue-100: #cfdced;
+    --blue-300: #8eadd5;
+    --blue-500: #5a87c2;
+    --gray-100: #ffffff;
+    --gray-300: #dedcdb;
+    --gray-500: #b4afad;
+    --black-100: #313846;
+    --black-300: #272d38;
+    --black-500: #1f242d;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Inter', sans-serif;
+}
+ul,
+ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+/* Header */
+
+/* Main */
+
+/* Footer */
