@@ -56,6 +56,7 @@ nav {
     height: 28px;
     width: 90%;
     padding: 0 35px;
+    text-transform: capitalize;
 }
 
 nav h1 {
@@ -302,7 +303,6 @@ body {
         display: block;
         position: fixed;
         width: 35%;
-        height: 210px;
         background-color: var(--blue-500);
         top: 80px;
         right: -100%;
@@ -311,15 +311,17 @@ body {
     }
 
     nav ul li {
-        display: block;
-        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
         line-height: 10px;
-        border-bottom: 2px solid var(--blue-100);
-        padding-bottom: 10px;
+        border: 2px solid var(--blue-300);
     }
 
     nav ul li a {
         font-size: 1.4rem;
+        font-weight: 600;
+        color: var(--gray-100);
     }
 
     nav a:focus {
