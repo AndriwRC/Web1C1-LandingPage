@@ -29,7 +29,6 @@ a {
     color: var(--black-300);
 }
 /* Header */
-
 #check {
     display: none;
 }
@@ -59,10 +58,11 @@ nav {
     height: 28px;
     width: 90%;
     padding: 0 35px;
+    text-transform: capitalize;
 }
 
 nav h1 {
-    font-size: 20px;
+    font-size: 2rem;
     color: var(--black-300);
     cursor: pointer;
 }
@@ -83,58 +83,6 @@ nav h1 {
     color: var(--black-300);
 }
 
-@media only screen and (min-width: 768px) {
-    nav h1 {
-        text-transform: uppercase;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .labelcheck {
-        display: inline;
-        transition: transform .5s;
-    }
-
-    nav h1 {
-        font-size: 14px;
-    }
-
-    .links {
-        display: block;
-        position: fixed;
-        width: 35%;
-        height: 210px;
-        background-color: var(--blue-500);
-        top: 80px;
-        right: -100%;
-        text-align: center;
-        transition: all .5s;
-    }
-
-    .links li {
-        display: block;
-        margin: 30px 0;
-        line-height: 10px;
-        border-bottom: 2px solid var(--blue-100);
-        padding-bottom: 10px;
-    }
-
-    .links li a {
-        font-size: 14px;
-    }
-
-    nav a:focus {
-        color: var(--gray-100);
-    }
-
-    #check:checked ~ .links {
-        right: 0%;
-    }
-
-    #check:checked ~ .labelcheck {
-        transform: rotate(-90deg);
-    }
-}
 
 /* Main */
 .main {
@@ -222,6 +170,31 @@ nav h1 {
     padding: 24px;
 }
 
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 178px;
+    min-height: 424px;
+    padding: 104px 80px;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--black-300);
+    background-color: var(--blue-300);
+}
+
+.container h4{
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 32px;
+}
+
+.container li{
+    margin-bottom: 24px;
+}
+
 @media (max-width: 1200px) {
     .main__content {
         width: 400px;
@@ -256,6 +229,9 @@ nav h1 {
     }
     .img {
         width: 364px;
+    }
+    .footer {
+        gap: 100px;
     }
 }
 
@@ -297,52 +273,7 @@ nav h1 {
     .contact-us__sect img {
         display: none;
     }
-}
 
-@media (max-width: 420px) {
-    .main__title {
-        font-size: 3.4rem;
-    }
-    .img {
-        width: 280px;
-    }
-    .logos__container {
-        padding: 24px 0;
-    }
-}
-
-/* Footer */
-.footer {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-wrap: wrap;
-    gap: 178px;
-    min-height: 424px;
-    padding: 104px 80px;
-    font-size: 1.6rem;
-    font-weight: 300;
-    color: var(--black-300);
-    background-color: var(--blue-300);
-}
-
-.container h4{
-    font-weight: 700;
-    font-size: 1.6rem;
-    margin-bottom: 32px;
-}
-
-.container li{
-    margin-bottom: 24px;
-}
-
-@media (max-width: 1200px) {
-    .footer {
-        gap: 100px;
-    }
-}
-
-@media (max-width: 960px) {
     .footer{
         padding: 72px 60px;
         gap: 72px;
@@ -355,4 +286,70 @@ nav h1 {
         text-align: center;
     }
 
+}
+
+@media only screen and (max-width: 768px) {
+    .labelcheck {
+        display: inline;
+        transition: transform .5s;
+    }
+
+    nav h1 {
+        font-size: 1.4rem;
+    }
+
+    .links {
+        display: block;
+        position: fixed;
+        width: 35%;
+        background-color: var(--blue-500);
+        top: 80px;
+        right: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    .links li {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        line-height: 1rem;
+        border: 2px solid var(--blue-300);
+    }
+
+    .links li a {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: var(--gray-100);
+    }
+
+    nav a:focus {
+        color: var(--gray-100);
+    }
+
+    #check:checked ~ .links {
+        right: 0%;
+    }
+
+    #check:checked ~ .labelcheck {
+        transform: rotate(-90deg);
+    }
+}
+
+@media (max-width: 420px) {
+    .main__title {
+        font-size: 3.4rem;
+    }
+    .img {
+        width: 280px;
+    }
+    .logos__container {
+        padding: 24px 0;
+    } 
+}
+
+@media only screen and (min-width: 768px) {
+    nav h1 {
+        text-transform: uppercase;
+    }
 }
